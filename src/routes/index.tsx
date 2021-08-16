@@ -10,4 +10,4 @@ export const Routes: React.FC = () => {
       <Route component={Profile} path="/profile" exact />
     </Switch>
   );
-}
+};
