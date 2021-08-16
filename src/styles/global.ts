@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 import { theme } from 'styles/theme';
-import background from 'assets/img/background.jpg';
+import background from 'assets/img/background.png';
 
 type Theme = {
   theme: typeof theme;
@@ -23,7 +23,8 @@ export const GlobalStyle = createGlobalStyle<Theme>`
   }
 
   body {
-    background: ${theme.palette.background.default};
+    background: ${theme.palette.background.default} url(${background}) no-repeat fixed bottom right;
+    background-size: 250px;
     -webkit-font-smoothing: antialiased;
   }
 
