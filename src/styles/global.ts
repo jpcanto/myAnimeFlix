@@ -1,7 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
+import { theme } from 'styles/theme';
 import background from 'assets/img/background.jpg';
 
-export const GlobalStyle = createGlobalStyle`
+type Theme = {
+  theme: typeof theme;
+};
+
+export const GlobalStyle = createGlobalStyle<Theme>`
   * {
     margin: 0;
     padding: 0;
@@ -18,8 +23,8 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   body {
-    background: #f0f0f5 url(${background}) no-repeat;
-    -webkit-font-smoothing: antialised;
+    background: ${theme.palette.background.default};
+    -webkit-font-smoothing: antialiased;
   }
 
   button {
